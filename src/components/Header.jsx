@@ -56,7 +56,7 @@ export default function Header() {
     <header className="fixed top-0 left-0 w-full bg-white bg-opacity-40 backdrop-blur-md shadow-lg border-b border-gray-400 z-50">
       <div className="flex justify-between items-center w-[95%] md:w-[90%] lg:w-[95%] mx-auto py-2 h-16">
         {/* Logo */}
-        <h1 className="text-2xl md:text-3xl font-bold text-darkOrange">Bharat Tex 2025</h1>
+        <a href="/" className="text-2xl md:text-3xl font-bold text-darkOrange">Bharat Tex 2025</a>
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex space-x-8">

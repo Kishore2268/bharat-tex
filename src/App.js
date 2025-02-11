@@ -15,56 +15,41 @@ import Footer from "./components/Footer";
 const App = () => {
   return (
     <div>
-      {/* Header */}
       <Header />
-
-      {/* Landing Section */}
       <LandingSection />
-
-      {/* Sections with IDs for Navigation */}
       <div id="about">
         <AboutUs />
       </div>
       <Thread />
-
       <div id="vision">
         <Vision />
       </div>
       <Thread />
-
       <div id="mission">
         <Mission />
       </div>
       <Thread />
-
       <div id="bharattex">
         <BharatTex />
       </div>
       <Thread />
-
       <div id="clients">
         <ClientsSection />
       </div>
       <Thread />
-
       <div id="photo-booths">
         <PhotoBoothsSection />
       </div>
       <Thread />
-
       <div id="success-stories">
         <SuccessStories />
       </div>
-
       <div id="contact">
         <ContactUs />
       </div>
-
-      {/* Footer */}
       <Footer />
     </div>
   );
 };
 
 export default App;
-

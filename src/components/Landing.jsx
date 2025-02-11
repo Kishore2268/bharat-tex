@@ -6,7 +6,7 @@ export default function LandingSection() {
     "/startup-india.webp",
     "/TOT.png",
     "/Zentelia.png",
-    "/NITI-AIM-LOGO.webp",
+    "/NITI-AIM-Logo.webp",
   ];
 
   return (
