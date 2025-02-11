@@ -3,7 +3,7 @@ import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 
 export default function ContactUs() {
   return (
-    <section className="py-32 px-6 text-center flex flex-col items-center">
+    <section className="py-32 px-2 text-center flex flex-col items-center">
       {/* Animated Heading */}
       <motion.div
         className="mb-10"
@@ -34,11 +34,11 @@ export default function ContactUs() {
       >
         {/* Phone Numbers with Icon */}
         <motion.div
-          className="flex items-center gap-4"
+          className="flex items-center gap-2"
           variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
         >
           <motion.div
-            className="w-12 h-12 flex items-center justify-center rounded-full border-2 border-lightBrown"
+            className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full border-2 border-lightBrown"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
@@ -56,11 +56,11 @@ export default function ContactUs() {
 
         {/* Email with Icon */}
         <motion.div
-          className="flex items-center gap-4"
+          className="flex items-center gap-2"
           variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
         >
           <motion.div
-            className="w-12 h-12 flex items-center justify-center rounded-full border-2 border-lightBrown"
+            className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full border-2 border-lightBrown"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >

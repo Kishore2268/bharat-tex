@@ -103,7 +103,7 @@ export default function Header() {
 
       {/* Mobile Navigation */}
       {menuOpen && (
-        <div className="lg:hidden bg-white bg-opacity-95 backdrop-blur-md w-[95%] shadow-lg z-50 transition-all duration-500 ease-in-out">
+        <div className="lg:hidden bg-white bg-opacity-35 backdrop-blur-md bg-transparent w-full shadow-lg z-50 transition-all duration-500 ease-in-out">
           <nav className="flex flex-col items-center space-y-4 border-t border-gray-400 py-4">
             {links.map(({ name, id }, index) => (
               <div key={id} className="w-[95%]">
