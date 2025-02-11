@@ -1,24 +1,32 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const Vision = () => {
   return (
-    <div className="text-center px-6 py-6 flex flex-col items-center">
-      {/* "Our" and "Vision" in separate lines with slant effect */}
-      <div className="flex flex-col items-center">
-        <h1 className="text-darkOrange text-6xl font-bold">
-          Our
-        </h1>
-        <h1 className="text-lightOrange text-6xl font-bold">
-          Vision
-        </h1>
-      </div>
+    <section className="text-center px-6 py-6 flex flex-col items-center">
+      {/* Animated Heading */}
+      <motion.h1
+        className="text-lightOrange text-3xl md:text-4xl lg:text-6xl font-bold tracking-[3px]"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        viewport={{ once:false,amount:0.5}}
+      >
+        <span className="text-darkOrange">Our</span> vision
+      </motion.h1>
 
-      {/* Description */}
-      <p className="text-black mt-4 max-w-2xl text-3xl mx-auto text-start">
+      {/* Animated Paragraph */}
+      <motion.p
+        className="text-black mt-4 max-w-2xl xs:text-lg sm:text-2xl lg:text-3xl tracking-[1px] mx-auto text-start"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
+        viewport={{ once:false,amount:0.5}}
+      >
         To empower businesses with seamless, scalable, and industry-oriented solutions
         that enhance growth and operational excellence.
-      </p>
-    </div>
+      </motion.p>
+    </section>
   );
 };
 

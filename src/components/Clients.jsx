@@ -1,33 +1,37 @@
+import { motion } from "framer-motion";
+
 export function ClientsSection() {
   const clientLogos = [
-    "/logos/client1.png",
-    "/logos/client2.png",
-    "/logos/client3.png",
-    "/logos/client4.png",
-    "/logos/client5.png",
-    "/logos/client6.png",
+    "/arrr.png",
+    "/gulabojaipur.png",
+    "/bigflex.png",
+    "/PLT.webp",
+    "/kriti.png",
+    "/midwest.png",
   ];
 
   return (
-    <section id="clients" className="text-center py-12">
-      {/* Heading with Image */}
-      <div className="flex flex-col md:flex-row items-center justify-center mb-6">
-        <div className="flex flex-col md:flex-row items-center">
-          <h2 className="text-4xl md:text-6xl font-bold">
-            <span className="text-darkOrange">Our</span>{" "}
-            <span className="text-lightOrange">Clients</span>
-          </h2>
-        </div>
+    <section className="text-center py-8">
+      {/* Heading */}
+      <div className="flex flex-col md:flex-row items-center justify-center mb-8">
+        <h2 className="text-3xl md:text-4xl lg:text-6xl font-bold">
+          <span className="text-darkOrange tracking-[3px]">Our</span>{" "}
+          <span className="text-lightOrange tracking-[3px]">Clients</span>
+        </h2>
       </div>
 
       {/* Clients Logo Section */}
-      <div className="flex flex-wrap justify-center gap-6">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8 place-items-center mx-auto">
         {clientLogos.map((logo, index) => (
-          <img
+          <motion.img
             key={index}
             src={logo}
             alt={`Client ${index + 1}`}
-            className="w-28 h-28 object-contain"
+            className="w-32 h-32 md:w-36 md:h-36 lg:w-48 lg:h-40 object-contain"
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: index * 0.2, ease: "easeOut" }}
+            viewport={{ once: false, amount: 0.5 }}
           />
         ))}
       </div>

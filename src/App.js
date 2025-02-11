@@ -21,24 +21,50 @@ const App = () => {
       {/* Landing Section */}
       <LandingSection />
 
-      <AboutUs />
+      {/* Sections with IDs for Navigation */}
+      <div id="about">
+        <AboutUs />
+      </div>
       <Thread />
-      <Vision />
+
+      <div id="vision">
+        <Vision />
+      </div>
       <Thread />
-      <Mission />
+
+      <div id="mission">
+        <Mission />
+      </div>
       <Thread />
-      <BharatTex />
+
+      <div id="bharattex">
+        <BharatTex />
+      </div>
       <Thread />
-      <ClientsSection />
+
+      <div id="clients">
+        <ClientsSection />
+      </div>
       <Thread />
-      <PhotoBoothsSection />
+
+      <div id="photo-booths">
+        <PhotoBoothsSection />
+      </div>
       <Thread />
-      <SuccessStories />
-      <Thread />
-      <ContactUs />
+
+      <div id="success-stories">
+        <SuccessStories />
+      </div>
+
+      <div id="contact">
+        <ContactUs />
+      </div>
+
+      {/* Footer */}
       <Footer />
     </div>
   );
 };
 
 export default App;
+

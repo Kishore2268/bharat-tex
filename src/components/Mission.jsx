@@ -1,21 +1,52 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const Mission = () => {
   return (
-    <div className="text-center px-6 py-6 flex flex-col items-center">
-      {/* "Our" and "Mission" in separate lines */}
-      <div className="flex flex-col items-center">
-        <h1 className="text-darkOrange text-6xl font-bold">Our</h1>
-        <h1 className="text-lightOrange text-6xl font-bold">Mission</h1>
-      </div>
+    <section  className="text-center px-6 py-6 flex flex-col items-center">
+      {/* Animated Heading */}
+      <motion.h1
+        className="text-lightOrange text-3xl md:text-4xl lg:text-6xl tracking-[3px] font-bold"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        viewport={{ once:false,amount:0.5 }}
+      >
+        <span className="text-darkOrange">Our</span> Mission
+      </motion.h1>
 
-      {/* Mission List */}
-      <ul className="text-black mt-4 max-w-5xl text-3xl mx-auto list-disc list-inside text-start">
-        <li>Provide end-to-end solutions for D2C brands and B2B companies.</li>
-        <li>Foster business transformation through technology-driven strategies.</li>
-        <li>Build long-term partnerships with clients, ensuring continuous growth and innovation.</li>
-      </ul>
-    </div>
+      {/* Animated Mission List with Staggered Delay */}
+      <motion.ul
+        className="text-black mt-4 max-w-5xl xs:text-lg sm:text-2xl lg:text-3xl mx-auto tracking-[1px] list-disc list-inside text-start"
+        initial="hidden"
+        whileInView="visible"
+        variants={{
+          hidden: { opacity: 0 },
+          visible: {
+            opacity: 1,
+            transition: { staggerChildren: 0.3 }, // Staggered delay for <li> items
+          },
+        }}
+        viewport={{ once:false,amount:0.5 }}
+      >
+        {[
+          "Provide end-to-end solutions for D2C brands and B2B companies.",
+          "Foster business transformation through technology-driven strategies.",
+          "Build long-term partnerships with clients, ensuring continuous growth and innovation.",
+        ].map((item, index) => (
+          <motion.li
+            key={index}
+            className="mb-2"
+            variants={{
+              hidden: { opacity: 0, y: 30 },
+              visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+            }}
+          >
+            {item}
+          </motion.li>
+        ))}
+      </motion.ul>
+    </section>
   );
 };
 
